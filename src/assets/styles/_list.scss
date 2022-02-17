@@ -1,0 +1,79 @@
+.taskList {
+    grid-area: tarefas;
+    height: 100%;
+
+    h2 {
+        display: flex;
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    ul {
+        max-height: 350px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+
+    @media screen and (min-width:1280px) {
+
+        h2 {
+            display: flex;
+            font-size: 25px;
+            margin-left: 35px;
+            margin-bottom: 12px;
+
+        }
+
+        ul {
+            overflow: auto;
+            max-height: 500px;
+        }
+    }
+}
+
+.item {
+    background: transparent;
+    border: 1px solid #996dff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 1px;
+        word-break: break-all;
+    }
+
+    span {
+        font-size: 15px;
+        color: #D0D0D0;
+    }
+
+
+}
+
+.selectedItem {
+    background-color: #8257e5;
+    border: none;
+
+}
+
+.finishedItem {
+    background-color: #542daf;
+    cursor: auto;
+
+    .completed {
+        display: block;
+        background-image: url('../../assets/image/check-mark.svg');
+        background-repeat: no-repeat;
+        background-size: 38px 38px;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 43px;
+    }
+}

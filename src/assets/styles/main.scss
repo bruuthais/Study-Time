@@ -1,0 +1,96 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #121214;
+    font-family: var(--font-family-sans-serif);
+    color: #fafafa
+}
+
+// atalhos cor & var :)
+
+//cores
+:root {
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+}
+
+
+/* Custom Scrollbar */
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2c3e50 transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #004b8021;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--another-blue);
+
+    &:hover {
+        background-color: #004b80d5;
+        transition: 0.2s;
+    }
+}
+
+
+.AppStyle {
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+    grid-template-areas:
+        "nova-tarefa"
+        "cronometro"
+        "tarefas"
+    ;
+    row-gap: 24px;
+    min-width: 320px;
+    min-height: calc(100vh - 32px);
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #121214;
+
+    @media screen and (min-width:1280px) {
+        grid-template-areas:
+            "nova-tarefa tarefas"
+            "cronometro tarefas"
+        ;
+        column-gap: 64px;
+        grid-template-rows: min-content min-content;
+        grid-template-columns: 750px 300px;
+        justify-content: center;
+        align-content: center;
+        padding: 64px;
+    }
+}
+
+//Sumário :)
+
+//Botão
+@import "button";
+
+//Listagem
+@import "list";
+
+//Formulário
+@import "form";
+
+//Cronômetro
+@import "timer";

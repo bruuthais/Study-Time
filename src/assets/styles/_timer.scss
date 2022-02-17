@@ -1,0 +1,61 @@
+//cronometro
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: cronometro;
+
+    .timerWrapper {
+        align-items: center;
+        background-color: #202221;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 3rem;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 15px 15px;
+        width: 252px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+
+
+    @media screen and (min-width:1280px) {
+
+        .timerWrapper {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 5rem;
+        }
+
+
+    }
+}
+
+
+//relogio
+.timerNumber {
+    height: 2rem;
+    width: 2rem;
+    padding: 8px 4px;
+
+
+    @media screen and (min-width:1280px) {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.timerDiv {
+    height: 4.2rem;
+
+    @media screen and (min-width:1280px) {
+        height: 12.6rem;
+    }
+}
